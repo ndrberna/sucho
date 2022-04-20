@@ -15,7 +15,7 @@ To interact and explore the results of Browsertrix crawler <https://github.com/w
 - WARC analysis.ipynb
 
 
-## Finding new candidates to crawl
+## Notebook dor finding new cultural heritage candidates to crawl
 
 For identifying new domains to be crawled a procedure have been developed in order to analyze huge dataset of domains. 
 
