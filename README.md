@@ -22,6 +22,7 @@ For identifying new domains to be crawled a procedure have been developed in ord
 A preliminary filtering based on data from filezones contains:
 
 The filters (OR clause) used on the zonefiles are:
+
 - ip_country" =="UA"
 - html_country == "UA"
 - domain endswith ".ua"
@@ -35,7 +36,11 @@ Using a list of keywords of interest ("museum", "theatre", "church") a matching 
 titles and with the words contained in the url.
 
 The filters used on "title translate" - "url" are the presence of keywords from the SUCHO spreadsheet as
-"sciences","academy","gallery","archive",religi", "synagogue", "mosque", "temple", ".edu" "library","scientific","journal","education","school","institute","college" "lyceum","academy","seminary","church","cathedral","opera","music","theater","academic","culture","museum","ukraine", "art","collection","national","repository","geography","ethnographic","history","tour","virtual","cinema","national","memorial","festival","center"
+
+>"sciences","academy","gallery","archive",religi", "synagogue", "mosque", "temple", ".edu" "library","scientific","journal","education","school","institute","college" "lyceum","academy","seminary","church","cathedral","opera","music","theater","academic","culture","museum","ukraine", "art","collection","national","repository","geography","ethnographic","history","tour","virtual","cinema","national","memorial","festival","center"
 
 
 If a corrispondence is found the url is selected and saved to a further step of manual investigation.
+
+
+[output](test.png) 
