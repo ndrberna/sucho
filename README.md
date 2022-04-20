@@ -7,9 +7,9 @@ The repository contains libraries used for the SUCHO Project (Save Ucranian Cult
 - Finding new cultural heritage candidates to crawl
 
 
-## Browsetrix softare
+## Notebook for interacting with Browsetrix output
 
-To interact and explore the results of Browsertrix crawler 2 jupyter notebooks have been developed as:
+To interact and explore the results of Browsertrix crawler <https://github.com/webrecorder/browsertrix-crawler> jupyter notebooks have been developed as:
 
 - JSONL find duplicates.ipynb 
 - WARC analysis.ipynb
@@ -23,19 +23,23 @@ A preliminary filtering based on data from filezones contains:
 
 The filters (OR clause) used on the zonefiles are:
 
-- ip_country" =="UA"
-- html_country == "UA"
-- domain endswith ".ua"
+- `ip_country" =="UA"`
+- `html_country == "UA"`
+- `domain endswith ".ua"`
 
 
+From each candidate the homepage is visited and it is extracted the the tag `title`, the `lang` attribuite and the page size. 
+The candidates are filtered based on:
 
-From each candidate it is extracted the the tag title, the lang attribuite and the page size from the homepage. Each title is passed to a translator library (Google translator) to convert from ukranian to english. 
+- `response code == 200`
+- `title != ""`
 
+The title of remaining candidates is then passed to a translator library (Google translator, ) to convert from ukranian to english. 
 
 Using a list of keywords of interest ("museum", "theatre", "church") a matching is made with the translated 
 titles and with the words contained in the url.
 
-The filters used on "title translate" - "url" are the presence of keywords from the SUCHO spreadsheet as
+The filters used on `title translate` - `url` are the presence of keywords from the SUCHO spreadsheet as
 
 >"sciences","academy","gallery","archive",religi", "synagogue", "mosque", "temple", ".edu" "library","scientific","journal","education","school","institute","college" "lyceum","academy","seminary","church","cathedral","opera","music","theater","academic","culture","museum","ukraine", "art","collection","national","repository","geography","ethnographic","history","tour","virtual","cinema","national","memorial","festival","center"
 
