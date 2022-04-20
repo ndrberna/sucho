@@ -42,5 +42,5 @@ The filters used on "title translate" - "url" are the presence of keywords from 
 
 If a corrispondence is found the url is selected and saved to a further step of manual investigation.
 
+![output](output.png)
 
-[output](test.png) 
