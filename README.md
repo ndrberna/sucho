@@ -34,7 +34,7 @@ The candidates are filtered based on:
 - `response code == 200`
 - `title != ""`
 
-The title of remaining candidates is then passed to a translator library (Google translator, ) to convert from ukranian to english. 
+The title of remaining candidates is then passed to a ~~translator library (Google translator)~~ to a pre-trained model from from Opus-MT() to convert from ukranian or russian to english. 
 
 Using a list of keywords of interest ("museum", "theatre", "church") a matching is made with the translated 
 titles and with the words contained in the url.
